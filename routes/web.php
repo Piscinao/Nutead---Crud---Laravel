@@ -21,6 +21,10 @@ Route::get('/produto/novo','ProdutosController@formularioCriacao');
 
 Route::post('/produto/novo','ProdutosController@registrarProduto')->name('registrar_produto');
 
-Route::get('/produto/ver/{id}','ProdutosController@formularioCriacao');
+Route::get('/produto/ver/{id}','ProdutosController@verProduto');
+
+Route::get('/produto/editar/{id}','ProdutosController@editarProduto');
+
+Route::post('/produto/editar/{id}','ProdutosController@salvarEdicao')->name('editar_produto');
 
 
