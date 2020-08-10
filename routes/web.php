@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/produto/novo','ProdutosController@formularioCriacao');
+
+Route::post('/produto/novo','ProdutosController@registrarProduto')->name('registrar_produto');
+
+Route::get('/produto/ver/{id}','ProdutosController@formularioCriacao');
+
+
